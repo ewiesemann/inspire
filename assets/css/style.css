@@ -4,4 +4,16 @@ body {
     background-size: cover;
     background-repeat: no-repeat
 }
+
+.row {
+    color: royalblue
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+}
     

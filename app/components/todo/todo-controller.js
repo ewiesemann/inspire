@@ -61,7 +61,7 @@ function TodoController() {
 		//YOU SHOULDN'T NEED TO CHANGE THIS
 		todoService.addTodo(todo, getTodos)
 		                         //^^^^^^^ EXAMPLE OF HOW TO GET YOUR TOODOS AFTER AN EDIT
-	//form.reset()
+	form.reset()
 	}
 
 	this.toggleTodoStatus = function (todoId) {
