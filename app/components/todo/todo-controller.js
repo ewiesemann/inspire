@@ -24,17 +24,19 @@ function TodoController() {
 			const todo = todos[i];
 			if (todo.completed == false) {
 				template +=`
-					<li>${todo.description}</li>
-					<input Type="checkbox" onclick = "app.controllers.todoController.toggleTodoStatus('${todo._id}')">Toggle</input>
-					<button onclick= "app.controllers.todoController.removeTodo('${todo._id}')">Delete</button>
+					<li>${todo.description}
+					<input Type="checkbox" onclick = "app.controllers.todoController.toggleTodoStatus('${todo._id}')"></input>
+					<button type="button" class="btn btn-outline-dark btn-sm" onclick= "app.controllers.todoController.removeTodo('${todo._id}')">Delete</button>
+					</li>
 					`
 
 			}
 			else {
 				template +=`
-					<li>${todo.description}</li>
-					<input Type="checkbox" onclick = "app.controllers.todoController.toggleTodoStatus('${todo._id}')"checked>Toggle</input>
-					<button onclick= "app.controllers.todoController.removeTodo('${todo._id}')">Delete</button>
+					<li>${todo.description}
+					<input Type="checkbox" onclick = "app.controllers.todoController.toggleTodoStatus('${todo._id}')"checked></input>
+					<button type="button" class="btn btn-outline-dark btn-sm"onclick= "app.controllers.todoController.removeTodo('${todo._id}')">Delete</button>
+					</li>
 					`
 
 			}
@@ -44,6 +46,7 @@ function TodoController() {
 			`
 		}
 		document.getElementById("todoList").innerHTML = template
+		document.getElementById("taskcount").innerHTML = todos.length
 	}
 
 	this.addTodoFromForm = function (e) {

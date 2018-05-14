@@ -3,16 +3,13 @@ function WeatherController() {
 	var weatherService = new WeatherService();
 
 	weatherService.getWeather(function (weather) {
-		console.log(weather);
-		console.log(weather.weather[0].icon)
 		var tempF = Math.floor((9 / 5) * (weather.main.temp) - 459.67)
 		var img = "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png"
 		var template = `
-		<h1>Current Temp: ${tempF}°<img src="${img}"></h1>
-		
-		<h2>City: ${weather.name}</h2>
-		<h3>Humidity: ${weather.main.humidity}<h3>
-		<h3>WindSpeed: ${weather.wind.speed}</h3>
+		<h3>${tempF}°<img src="${img}"></h3>
+		<h4>${weather.name}</h4>
+		<p>Humidity: ${weather.main.humidity}<p>
+		<p>WindSpeed: ${weather.wind.speed}</p>
 		
 		`
 		document.getElementById("weather").innerHTML = template

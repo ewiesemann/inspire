@@ -11,13 +11,13 @@
 <body id="body">
 
 	<div class="row">
-		<div class="col-10 bg">
+		<div class="col-2">
 			<div id="weather">
 			</div>
 		</div>
-		<div class="col-2 bg">
+		<div class="col-2 offset-8">
 			<div id="todo">
-				<h3>To Do List</h3>
+				<h3>To Do:   <span id="taskcount"></span></h3>
 				<div id="todoList"></div>
 				<form onsubmit="app.controllers.todoController.addTodoFromForm(event)">
 					<input type="text" name="todo" placeholder="To Do">
@@ -25,9 +25,11 @@
 				</form>
 			</div>
 		</div>
-		<div class="footer" id="quote">
-		</div>
 	</div>
+
+			<div class="footer" id="quote">
+			</div>
+	
 
 
 

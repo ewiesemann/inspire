@@ -6,7 +6,20 @@ body {
 }
 
 .row {
+    color: white;
+}
+
+#todo {
+    background-color: rgba(68, 66, 66, 0.3)
+}
+
+
+.btn {
     color: white
+}
+
+#weather {
+    background-color: rgba(8, 8, 8, 0.1)
 }
 
 .footer {
@@ -18,9 +31,9 @@ body {
     background-color: rgba(8, 8, 8, 0.08)
 }
 
-.bg {
-    background-color: rgba(8, 8, 8, 0.08)
-}
+
+
+
 
 
 

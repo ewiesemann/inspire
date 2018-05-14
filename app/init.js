@@ -7,3 +7,4 @@ var app = {
     imageController: new ImageController()
   }
 }
+
